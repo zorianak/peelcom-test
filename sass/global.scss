@@ -1,0 +1,51 @@
+@import "mixins";
+
+body {
+    background-color: $dark-grey;
+    
+    #wrapper {
+        border: 1px solid red;
+        
+        .groove {
+            background: url('../images/handle_bg.png') no-repeat center center;
+            height: 531px;
+            width: 530px;
+            overflow: hidden;
+            
+            .volUp {
+                background: url('../images/volume_up.png') no-repeat center center;
+                width: 79px;
+                height: 66px;
+                margin: 40px auto 0;
+            }
+            
+            .midRow {
+                clear: both;
+                
+                .prev {
+                    background: url('../images/ch_prev.png') no-repeat center center;
+                    height: 68px;
+                    width: 60px;
+                    margin: 128px 0 0 52px;
+                    float: left;
+                }
+                
+                .play {
+                    background: url('../images/center_ball.png') no-repeat center center;
+                    height: 218px;
+                    width: 218px;
+                    float: left;
+                    margin: 70px 0 0 45px;
+                }
+                
+                .next {
+                    background: url('../images/ch_next.png') no-repeat center center;
+                    height: 68px;
+                    width: 60px;
+                    float: left;
+                    margin: 128px 0 0 29px;
+                }
+            }
+        }
+    }
+}
