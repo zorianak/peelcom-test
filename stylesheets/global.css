@@ -48,3 +48,16 @@ body #wrapper .groove .midRow .next {
   float: left;
   margin: 128px 0 0 29px;
 }
+/* line 50, ../sass/global.scss */
+body #wrapper .groove .volDown {
+  background: url("../images/volume_down.png") no-repeat center center;
+  width: 48px;
+  height: 66px;
+  margin: 27px auto 0;
+}
+/* line 59, ../sass/global.scss */
+body .clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

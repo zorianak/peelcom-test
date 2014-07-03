@@ -46,6 +46,19 @@ body {
                     margin: 128px 0 0 29px;
                 }
             }
+            
+            .volDown {
+                background: url('../images/volume_down.png') no-repeat center center;
+                width: 48px;
+                height: 66px;
+                margin: 27px auto 0;
+            }
         }
+    }
+    
+    .clearfix:after {
+        content:"";
+        display:table;
+        clear:both
     }
 }
