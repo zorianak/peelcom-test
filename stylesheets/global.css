@@ -2,33 +2,29 @@
 body {
   background-color: #2f2f2f;
 }
-/* line 6, ../sass/global.scss */
-body #wrapper {
-  border: 1px solid red;
-}
-/* line 9, ../sass/global.scss */
+/* line 8, ../sass/global.scss */
 body #wrapper .groove {
   background: url("../images/handle_bg.png") no-repeat center center;
   height: 531px;
   width: 530px;
   overflow: hidden;
 }
-/* line 15, ../sass/global.scss */
+/* line 14, ../sass/global.scss */
 body #wrapper .groove .volUp {
   background: url("../images/volume_up.png") no-repeat center center;
   width: 79px;
   height: 66px;
   margin: 40px auto 0;
 }
-/* line 21, ../sass/global.scss */
+/* line 20, ../sass/global.scss */
 body #wrapper .groove .volUp:active {
   background: url("../images/volume_up_press.png") no-repeat center center;
 }
-/* line 26, ../sass/global.scss */
+/* line 25, ../sass/global.scss */
 body #wrapper .groove .midRow {
   clear: both;
 }
-/* line 29, ../sass/global.scss */
+/* line 28, ../sass/global.scss */
 body #wrapper .groove .midRow .prev {
   background: url("../images/ch_prev.png") no-repeat center center;
   height: 68px;
@@ -36,11 +32,11 @@ body #wrapper .groove .midRow .prev {
   margin: 128px 0 0 52px;
   float: left;
 }
-/* line 36, ../sass/global.scss */
+/* line 35, ../sass/global.scss */
 body #wrapper .groove .midRow .prev:active {
   background: url("../images/ch_prev_press.png") no-repeat center center;
 }
-/* line 41, ../sass/global.scss */
+/* line 40, ../sass/global.scss */
 body #wrapper .groove .midRow .play {
   background: url("../images/center_ball.png") no-repeat center center;
   height: 218px;
@@ -48,11 +44,11 @@ body #wrapper .groove .midRow .play {
   float: left;
   margin: 70px 0 0 45px;
 }
-/* line 48, ../sass/global.scss */
+/* line 47, ../sass/global.scss */
 body #wrapper .groove .midRow .play:active {
   background: url("../images/center_ball_press.png") no-repeat center center;
 }
-/* line 53, ../sass/global.scss */
+/* line 52, ../sass/global.scss */
 body #wrapper .groove .midRow .next {
   background: url("../images/ch_next.png") no-repeat center center;
   height: 68px;
@@ -60,22 +56,22 @@ body #wrapper .groove .midRow .next {
   float: left;
   margin: 128px 0 0 29px;
 }
-/* line 60, ../sass/global.scss */
+/* line 59, ../sass/global.scss */
 body #wrapper .groove .midRow .next:active {
   background: url("../images/ch_next_press.png") no-repeat center center;
 }
-/* line 66, ../sass/global.scss */
+/* line 65, ../sass/global.scss */
 body #wrapper .groove .volDown {
   background: url("../images/volume_down.png") no-repeat center center;
   width: 48px;
   height: 66px;
   margin: 27px auto 0;
 }
-/* line 72, ../sass/global.scss */
+/* line 71, ../sass/global.scss */
 body #wrapper .groove .volDown:active {
   background: url("../images/volume_down_press.png") no-repeat center center;
 }
-/* line 79, ../sass/global.scss */
+/* line 78, ../sass/global.scss */
 body .clearfix:after {
   content: "";
   display: table;
