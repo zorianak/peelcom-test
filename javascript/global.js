@@ -37,7 +37,7 @@ $(document).ready(function(){
             } else {
                 console.log('else');
                 audioPlaying = true;
-                playAudio(audio, nowPlaying);
+                playAudio(audio, nowPlaying, -1);
             }
         }
         
@@ -55,7 +55,7 @@ $(document).ready(function(){
             }
             
             // then we want to play that track
-            playAudio(audio, nowPlaying);
+            playAudio(audio, nowPlaying, 0);
         }
         
         // For prev, if it's at 1, then we don't want to decrement it
@@ -70,26 +70,43 @@ $(document).ready(function(){
             }
             
             // then we want to play that track
-            playAudio(audio, nowPlaying);
+            playAudio(audio, nowPlaying, 0);
         }
+        
+        // handle volume/up down now, which shouldn't be too difficult we hope
+        if(doThis === 'volUp') {
+            // test to make sure volume isn't aalready at 100%
+            if(audio[nowPlaying].volume === 1.0) { 
+                alert('Volume is already at max.')
+            } else {
+                audio[nowPlaying].volume += .05;
+            }
+        }
+        
+        if(doThis === 'volDown') {
+            // test to make sure volume isn't aalready at 100%
+            if(audio[nowPlaying].volume === 0) { 
+            } else {
+                audio[nowPlaying].volume -= .05;
+            }
+        }
+        
     });
 });
 
-// Ideally I'd want to just grab everything out of the music directory, but for now... we'll just do this
-function createPlaylist() {
-    audio = {}
-    audio["1"] = new Audio();
-    audio["1"].src = "music/23.mp3";
-
-    audio["2"] = new Audio();
-    audio["2"].src = "music/s14.mp3";
+function playAudio(audio, nowPlaying, time) {
     
-    audio["3"] = new Audio();
-    audio["3"].src = "music/thirsty-work.mp3";
-}
-
-function playAudio(audio, nowPlaying) {
-    audio[nowPlaying].play();
+    // the original play/pause functions will pass -1, so that it doesn't start
+    // from the beginning every time we hit play/pause.
+    if(time === -1) {
+        audio[nowPlaying].play();
+    }
+    // but, next/prev will pass in a 0
+    else {
+        var playThis = audio[nowPlaying];
+        playThis.src = audio[nowPlaying].src + '#t=' + time;
+        playThis.play();
+    }
 }
 
 function pauseAudio(audio, nowPlaying)  {
