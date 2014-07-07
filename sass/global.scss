@@ -17,6 +17,10 @@ body {
                 width: 79px;
                 height: 66px;
                 margin: 40px auto 0;
+                
+                &:active {
+                    background: url('../images/volume_up_press.png') no-repeat center center;
+                }
             }
             
             .midRow {
@@ -28,6 +32,10 @@ body {
                     width: 60px;
                     margin: 128px 0 0 52px;
                     float: left;
+                    
+                    &:active {
+                        background: url('../images/ch_prev_press.png') no-repeat center center;
+                    }
                 }
                 
                 .play {
@@ -36,6 +44,10 @@ body {
                     width: 218px;
                     float: left;
                     margin: 70px 0 0 45px;
+                    
+                    &:active {
+                        background: url('../images/center_ball_press.png') no-repeat center center;
+                    }
                 }
                 
                 .next {
@@ -44,6 +56,10 @@ body {
                     width: 60px;
                     float: left;
                     margin: 128px 0 0 29px;
+                    
+                    &:active {
+                        background: url('../images/ch_next_press.png') no-repeat center center;
+                    }
                 }
             }
             
@@ -52,6 +68,10 @@ body {
                 width: 48px;
                 height: 66px;
                 margin: 27px auto 0;
+                
+                &:active {
+                        background: url('../images/volume_down_press.png') no-repeat center center;
+                    }
             }
         }
     }
