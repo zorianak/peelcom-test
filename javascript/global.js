@@ -14,7 +14,7 @@ $(document).ready(function(){
     audio["3"] = new Audio();
     audio["3"].src = "music/thirsty-work.mp3";
     
-    var audioSize = 3;
+    var audioSize = getAudioSize(audio);
     
     // set these up to track if something's playing and which track to play
     var audioPlaying = false;
@@ -94,21 +94,60 @@ $(document).ready(function(){
     });
 });
 
+/*****************************************
+
+This plays the audio. It tests for if we need to
+start at the beginning (for 'next' or 'prev') or
+if we are starting where we were (for when it
+is paused or not).
+
+*****************************************/
+
 function playAudio(audio, nowPlaying, time) {
-    
-    // the original play/pause functions will pass -1, so that it doesn't start
-    // from the beginning every time we hit play/pause.
-    if(time === -1) {
-        audio[nowPlaying].play();
-    }
-    // but, next/prev will pass in a 0
-    else {
+    // Starting to play it sends in a -1, but
+    // hitting next/prev sends a 0. So we can
+    // just test for 0.
+    if(time === 0) {
         var playThis = audio[nowPlaying];
         playThis.src = audio[nowPlaying].src + '#t=' + time;
         playThis.play();
     }
+    else {
+        audio[nowPlaying].play();
+    }
 }
 
+/*****************************************
+
+This function gets the size of the playlist.
+
+This was at first hardcoded for the ease of the challenge, but 
+I prefer to have my variables softcoded if possible.
+
+Note that I hate using a for-in: I'd prefer to have everything
+put into an array, and then test that aray.
+
+*****************************************/
+
+function getAudioSize(audio) {
+        var i = 0;
+        console.log(audio);
+        for( var key in audio ) {
+            if( audio.hasOwnProperty(key) ) {
+                i++;
+                console.log('key found');
+            }
+        }
+    
+    return i;
+    }
+
+
+/*****************************************
+
+Basic pause function
+
+*****************************************/
 function pauseAudio(audio, nowPlaying)  {
     audio[nowPlaying].pause();
 }

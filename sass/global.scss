@@ -5,11 +5,14 @@ body {
     
     #wrapper {
         
+        
+        
         .groove {
             background: url('../images/handle_bg.png') no-repeat center center;
             height: 531px;
             width: 530px;
             overflow: hidden;
+            margin: 0 auto;
             
             .volUp {
                 background: url('../images/volume_up.png') no-repeat center center;
